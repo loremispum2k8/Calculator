@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111111;
+}
+.calc-Container{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 480px;
+    height: 780px;
+    padding: 26px;
+    border-radius: 24px;
+    border: 2px solid #131313;
+    box-shadow: 10px 10px 10px 10px rgba(8, 8, 8, 0.753);
+}
+#screen{
+    height: 200px;
+    background-color: #070707;
+    border: 2px solid #131313;
+    width: 100%;
+    color: rgb(200, 211, 221);
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+#touchpad{
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    width: 100%;
+    justify-content: space-between;
+    height: 580px;
+}
+#row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    width: 100%;
+}
+.pad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 120px;
+    width: 120px;
+    font-weight: 500;
+    font-size: 30px;
+    cursor: pointer;
+}
+.zero{
+    width: 240px;
+}
+.white{
+    color: rgb(200, 211, 221);
+}
+.orange{
+    color:  rgb(209, 89, 33);
+}
+.pad:hover .round{
+    background-color: #1b1b1b;
+}
+.round{
+    background-color: transparent;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 70px;
+    transition: background-color, 0.1s;
+}
+.orange-round{
+    background-color: rgb(209, 89, 33);
+    color: white;
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
