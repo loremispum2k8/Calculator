@@ -79,6 +79,11 @@ equal.addEventListener('click', ()=> {
             case '÷':
                 if(numberTwo === 0){
                     result = "Error"
+                    firstN = [];
+                    secondN = [];
+                    symbol = '';
+                    numberOne = '';
+                    numberTwo = '';
                 } else result = (numberOne / numberTwo).toFixed(12)
             break;
         }
@@ -149,23 +154,10 @@ reverseButton.addEventListener('click', ()=>{
         let symbolJoiner = actualSplitter.join('');
         firstN = actualSplitter;
         screen.textContent = symbolJoiner;
-    } else if((secondN.length !== 0)){
-        let splitter = (screen.textContent).split('');
-        let joiner = splitter.join('')
-        let symbolSPlitter;
-        switch (symbol){
-            case '+':
-                symbolSPlitter = joiner.split('+')
-            break;
-            case '-':
-                symbolSPlitter = joiner.split('-')
-            break;
-            case 'x':
-                symbolSPlitter = joiner.split('x')
-            break;
-            case '÷':
-                symbolSPlitter = joiner.split('÷')
-            break;
-        }
+    } else {
+        secondN.pop();
+        let index  = screen.textContent.indexOf(symbol);
+        let placeholder =  ((screen.textContent.split('')).slice(0, index+1)).join('');
+        screen.textContent = placeholder + secondN.join('')
     }
 })
